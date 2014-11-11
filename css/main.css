@@ -1,0 +1,30 @@
+﻿body{
+    font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-size: 13px;
+}
+
+.mtm {
+    margin-top: 10px;
+}
+
+.pam {
+	padding: 10px;
+}
+
+.uiBoxYellow 
+{
+    width:300px;
+	background-color: #fff9d7;
+	border: 1px solid #e2c822;
+}
+
+.uiBoxRed {
+    background-color: #ffebe8;
+	border: 1px solid #dd3c10;
+}
+
+
+.uiBoxGray {
+	background-color: #f2f2f2;
+    border: 1px solid #ccc;
+}

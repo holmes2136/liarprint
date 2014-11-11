@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XMLCONTENT>
+    <POS TITLE="{N}、DEMO1：" ID="tab-home">
+        <TAB TITLE="DEMO1-1：" SPACE_COUNT="2" >
+            <ELE TARGET="txt_ID" RULE_ID="00" CONTENT="身分證號碼變更為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_NAME" RULE_ID="00" CONTENT="姓名變更為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_GENDER" RULE_ID="00" CONTENT="性別為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_BIRTH" RULE_ID="00" CONTENT="出生日期為{0}" RULE=""></ELE>
+            <ELE TARGET="" CONTENT="※台塑董事長李志村更曾說「以後年輕人月薪不是22K，可能只剩15K」，專家表示，如果台灣想扭。"></ELE>
+        </TAB>
+        <TAB TITLE="DEMO1-2：" SPACE_COUNT="2" >
+            <ELE TARGET="txt_ID2" RULE_ID="00" CONTENT="身分證號碼變更為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_NAME2" RULE_ID="00" CONTENT="姓名變更為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_GENDER2" RULE_ID="00" CONTENT="性別為{0}" RULE=""></ELE>
+            <ELE TARGET="txt_BIRTH2" RULE_ID="00" CONTENT="出生日期為{0}" RULE=""></ELE>
+            <ELE TARGET="" CONTENT="※test。"></ELE>
+        </TAB>
+    </POS>
+    <POS TITLE="{N}、DEMO2：" ID="tab-money">
+        <TAB TITLE="DEMO2：" SPACE_COUNT="2" >
+            <ELE MUST_HAVE="txt_Money" TARGET="txt_Money" RULE_ID="00" FORMAT="MONEY" CONTENT="存款變更為{0}" RULE=""></ELE>
+        </TAB>
+    </POS>
+    <POS TITLE="{N}、DEMO3：" ID="tab-date">
+        <TAB TITLE="DEMO3：" SPACE_COUNT="2" >
+            <ELE MUST_HAVE="txt_Date" TARGET="txt_Date" RULE_ID="00" FORMAT="DATE" CONTENT="日期變更為{0}" RULE=""></ELE>
+        </TAB>
+    </POS>
+    <POS TITLE="{N}、DEMO4：" ID="tab-commentBr">
+        <TAB TITLE="DEMO4：" SPACE_COUNT="2" >
+            <ELE MUST_HAVE="txt_Money" TARGET="txt_Money" RULE_ID="00" FORMAT="MONEY" CONTENT="存款變更為{0}" RULE=""></ELE>
+            <ELE TARGET="" CONTENT="※中、韓一旦簽訂FTA零關稅，台灣面板、石化業將受到最大衝擊，台灣競爭力大減，大陸可能縮減跟台灣進口產品，" RULE=""/>
+            <ELE TARGET="" CONTENT="   影響就業人口、薪資，恐怕有90萬人生計遭波及。" RULE=""/>
+        </TAB>
+    </POS>
+    <POS TITLE="{N}、DEMO5：" ID="tab-rule1">
+        <TAB TITLE="DEMO5：" SPACE_COUNT="2" >
+            <ELE MUST_HAVE="txt_Money" TARGET="txt_Money" RULE_ID="00" FORMAT="MONEY" CONTENT="存款變更為{0}" RULE="{txt_Money} > 10000 "></ELE>
+        </TAB>
+    </POS>
+
+    <POS TITLE="{N}、DEMO6：" ID="tab-checkgroup">
+        <TAB TITLE="DEMO6：" SPACE_COUNT="2" >
+            <ELE MUST_HAVE="chk_group" TARGET="chk_group" RULE_ID="00"  CONTENT="支付方式為現金" RULE="ArrayIndexOf([ {chk_group} ],'1') >= 0"></ELE>
+            <ELE MUST_HAVE="chk_group" TARGET="chk_group" RULE_ID="00"  CONTENT="支付方式為支票" RULE="ArrayIndexOf([ {chk_group} ],'2') >= 0"></ELE>
+        </TAB>
+    </POS>
+
+    <POS TITLE="{N}、DEMO7：" ID="tab-otherField">
+        <TAB TITLE="DEMO7：" SPACE_COUNT="2" >
+            <ELE TARGET="txt_NAME" RULE_ID="00" CONTENT="姓名變更為{0}" RULE="{hid_Money} > 3000"></ELE>
+        </TAB>
+    </POS>
+    
+    <POS TITLE="{N}、DEMO8：" ID="tab-greenComment">
+        <TAB TITLE="DEMO8：" SPACE_COUNT="2" >
+            <ELE TARGET="txt_NAME" RULE_ID="00" CONTENT="姓名變更為{0}" RULE=""></ELE>
+            <ELE TARGET="" CONTENT="[green]※中、韓一旦簽訂FTA零關稅，台灣面板、石化業將受到最大衝擊，台灣競爭力大減，大陸可能縮減跟台灣進口產品，影響就業人口、薪資，恐怕有90萬人生計遭波及" RULE=""/>
+        </TAB>
+    </POS>
+
+    <POS TITLE="{N}、DEMO9：" ID="tab-addCustFunc">
+        <TAB TITLE="DEMO9：" SPACE_COUNT="2" >
+            <ELE TARGET="txt_Age" RULE_ID="00" CONTENT="年紀滿18以上" RULE="custFunc('txt_Age') === '大於18' "></ELE>
+        </TAB>
+    </POS>
+
+    <POS TITLE="{N}、DEMO10：" ID="tab-multiOpt">
+        <TAB TITLE="DEMO10：" SPACE_COUNT="2" >
+            <ELE TARGET="check_dateGroup" RULE_ID="00" CONTENT="指定日為每月的{0}" RULE="" TARGET_VALUE="TEXT2"></ELE>
+        </TAB>
+    </POS>
+
+    <POS TITLE="{N}、DEMO11：" ID="tab-addRuleToTarget">
+        <TAB TITLE="DEMO11：" SPACE_COUNT="2" >
+            <ELE TARGET="@GET_NAME(txt_father txt_mom)" RULE_ID="00" CONTENT="主要監護人為{0}" RULE="" ></ELE>
+        </TAB>
+    </POS>
+    
+</XMLCONTENT>

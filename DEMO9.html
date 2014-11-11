@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+     <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <div class=" mtm pam uiBoxYellow">
+       此範例示範 添加客製化 function 於 RULE 規則內
+       輸入滿 18 歲才會做套印動作
+       <br />
+       <br />
+    </div>
+    <br />
+
+     <div id="tab-addCustFunc">
+       <div id="txt_Age" data-liartype="text">
+            <input type="text"   /></br>
+        </div>
+        <br />
+        <input type="button" id="gotoPreview" value="套印"/>
+    </div>
+
+</body>
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.liarobject.js"></script>
+    <script type="text/javascript" src="Scripts/liar.extend.js"></script>
+    <script type="text/javascript" src="Scripts/liar.print.js"></script>
+
+    <script type="text/javascript">
+
+        $("#gotoPreview").on('click', function (e) {
+            e.preventDefault();
+            var result = createFreeFormatData('tab-addCustFunc');
+            console.log(result);
+        });
+
+        //客製化 function 以便使用於 RULE 規則中
+        function custFunc(age) {
+            var $ctl_age = $("#" + age);
+            var ageVal = $ctl_age.getLiarVal();
+            var realAge = !!ageVal ? parseInt(ageVal, 10) : 0;
+
+            if (realAge > 18) { return "大於18"; }
+        }
+
+    </script>
+
+
+</html>

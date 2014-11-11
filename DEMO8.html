@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+     <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <div class=" mtm pam uiBoxYellow">
+       此範例示範 顯示綠色註解
+       <br />
+       <br />
+       可能會有狀況是字的顏色需要改變 , 請再註解處使用 b b code 的方式 <br />
+       再請自行於後端自行判斷並改變顏色 <br />
+    </div>
+    <br />
+
+     <div id="tab-greenComment">
+       <div id="txt_NAME" data-liartype="text">
+            <input type="text"   /></br>
+        </div>
+        <br />
+        <input type="button" id="gotoPreview" value="套印"/>
+    </div>
+
+</body>
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.liarobject.js"></script>
+    <script type="text/javascript" src="Scripts/liar.extend.js"></script>
+    <script type="text/javascript" src="Scripts/liar.print.js"></script>
+
+    <script type="text/javascript">
+
+        $("#gotoPreview").on('click', function (e) {
+            e.preventDefault();
+            var result = createFreeFormatData('tab-greenComment');
+            console.log(result);
+        });
+       
+
+    </script>
+
+
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+     <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <div class=" mtm pam uiBoxYellow">
+       此範例示範 如何客製化 function 以便於使用於 xml 
+       設定中的 target
+       <br />
+       <br />
+    </div>
+    <br />
+
+     <div id="tab-addRuleToTarget">
+        <div id="txt_father" data-liartype="text">
+            <input type="text" value="父親"/>
+        </div>
+          <div id="txt_mom" data-liartype="text">
+            <input type="text" value="母親"/>
+        </div>
+        <br />
+        <input type="button" id="gotoPreview" value="套印"/>
+    </div>
+
+</body>
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.liarobject.js"></script>
+    <script type="text/javascript" src="Scripts/liar.extend.js"></script>
+    <script type="text/javascript" src="Scripts/liar.print.js"></script>
+
+    <script type="text/javascript">
+
+        $("#gotoPreview").on('click', function (e) {
+            e.preventDefault();
+            var result = createFreeFormatData('tab-addRuleToTarget');
+            console.log(result);
+        });
+
+
+        //客製化function 使用於target 設定中
+        function GET_NAME(NAME_1, NAME_2) {
+            var val1 = $("#" + NAME_1).getLiarVal(),
+                val2 = $("#" + NAME_2).getLiarVal(),
+                result = '';
+
+            result = !!val1 ? val1 : val2 || '';
+
+            return result;
+
+        }
+
+    </script>
+
+
+</html>

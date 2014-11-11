@@ -1,4 +1,17 @@
 liarprint
 =========
 
-Solve print problem
+TARGET : 
+```
+主要為了解決套印時 , 需要可動態變換套印內容以及套印規則
+   
+```
+
+Features : 
+```
+1. 依據 xml 設定動態變換套印規則
+2. 依據 xml 設定動態變換套印文字
+3. 依據 xml 設定動態變換套印權力說明
+4. MONEY , DATE 等套印格式支援
+   
+```
