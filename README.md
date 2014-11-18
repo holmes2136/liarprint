@@ -17,3 +17,10 @@ Features :
 4. MONEY , DATE 等套印格式支援
    
 ```
+
+Sample : 
+```
+假設畫面上如下附圖 : 
+![alt text](https://dl.dropboxusercontent.com/u/23971112/github/2014-11-18_224016.jpg "Title")
+
+```
