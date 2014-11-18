@@ -21,6 +21,13 @@ Features :
 Sample : 
 ```
 假設畫面上如下附圖 : 
-![alt text](https://dl.dropboxusercontent.com/u/23971112/github/2014-11-18_224016.jpg "Title")
+```
+![alt text](https://dl.dropboxusercontent.com/u/23971112/github/2014-11-18_224016.jpg  "Title")
 
 ```
+我們可能需要依據勾選不同項目而產生不同的文字內容
+
+
+```
+
+
