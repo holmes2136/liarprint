@@ -25,9 +25,10 @@ Sample :
 ![alt text](https://dl.dropboxusercontent.com/u/23971112/github/2014-11-18_224016.jpg  "Title")
 
 ```
-我們可能需要依據勾選不同項目而產生不同的文字內容
-
-
+我們可能需要依據勾選不同項目而產生不同的文字內容 , 如下圖 , 當勾選 15 日 , 出現如下文字 : 
+指定日為每月的15日 , 勾選 25 日則文字也會跟著變化 , 而文字產生的內容以及規則我們是以 xml 來設定
 ```
+![alt text](https://dl.dropboxusercontent.com/u/23971112/github/2014-11-18_224412.jpg  "Title")
+
 
 
