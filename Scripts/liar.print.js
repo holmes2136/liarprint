@@ -216,7 +216,6 @@ function GenerateFixedColumn($ele) {
 
     }
     if (ruleResult == true) {
-        //boyliu 20140818
         if (content.indexOf("[br]") > 0) {
             content = content.replace(/\[br]/g, '\n' + ''.padLeft(space, '　'));
         }
@@ -326,7 +325,6 @@ function GenerateFixedGridColumn($ele) {
                 }
 
                 //符合忽略條件，跳過下一個迴圈。
-                //boyliu 20140818
                 IGNORE = Ignore_index.indexOf(i.toString()) != -1 ? true : false;
                 if (target_value == "" && IGNORE) {
                     i++;
@@ -334,7 +332,6 @@ function GenerateFixedGridColumn($ele) {
                     continue;
                 }
 
-                //boyliu 20140925
                 //符合前一項目為空條件，將前一項目值設為空
                 if (i != 0 && SET_NONE_BEFORE.indexOf(i.toString()) != -1 && valList[i] == "") {
                     valList[i - 1] = "";
@@ -431,7 +428,6 @@ function GenerateFreeTab($item) {
                 FreeformatSettings.tabcnt = FreeformatSettings.tabcnt + 1;
                 resultAll += '　' + $.format("{0}.{1}\n", FreeformatSettings.tabcnt, $tab.attr("TITLE"));
             }
-            //boyliu 20140814
             //如有CONTAIN_AS_TITLE屬性則將內容套至TITLE。
             //＊注意：無法與TITLE屬性並存
             else if ($tab.attr("CONTAIN_AS_TITLE") != undefined && $tab.attr("CONTAIN_AS_TITLE") == 'Y') {
@@ -612,7 +608,6 @@ function createFreeFormatData(tab) {
 }
 
 
-//Holmes
 //數字轉中文
 function chineseNumber(number, lowerorsupper, tail) {
     //轉換值是否為整數  
