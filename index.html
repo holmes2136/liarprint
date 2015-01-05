@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Liarprint by holmes2136</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Liarprint</h1>
+        <p>print framework</p>
+        <p class="view"><a href="https://github.com/holmes2136/liarprint">View the Project on GitHub <small>holmes2136/liarprint</small></a></p>
+        <ul>
+          <li><a href="https://github.com/holmes2136/liarprint/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/holmes2136/liarprint/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/holmes2136/liarprint">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="liarprint" class="anchor" href="#liarprint" aria-hidden="true"><span class="octicon octicon-link"></span></a>liarprint.</h3>
+
+<p>主要為了解決套印時 , 需要可動態變換套印內容以及套印規則 , 
+因此先將變動的內容藉由 javascript 動態產生 , 之後儲存到 DB , 
+再經由後端產生 PDF , 目前只有 DEMO 前端部份模組</p>
+
+<h3>
+<a id="features-" class="anchor" href="#features-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features :</h3>
+
+<pre><code>1. 依據 xml 設定動態變換套印規則
+2. 依據 xml 設定動態變換套印文字
+3. 依據 xml 設定動態變換套印權利說明
+4. MONEY , DATE 等套印格式支援
+</code></pre>
+
+<h3>
+<a id="sample--假設畫面上如下附圖-" class="anchor" href="#sample--%E5%81%87%E8%A8%AD%E7%95%AB%E9%9D%A2%E4%B8%8A%E5%A6%82%E4%B8%8B%E9%99%84%E5%9C%96-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample : 假設畫面上如下附圖 :</h3>
+
+<p><img src="https://camo.githubusercontent.com/9ee045e0b60483841db2927d700b2fd856e25b27/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32333937313131322f6769746875622f323031342d31312d31385f3232343031362e6a7067" alt=""></p>
+
+<pre><code>我們可能需要依據勾選不同項目而產生不同的文字內容 , 如下圖 , 當勾選現金 , 出現如下文字 : 
+支付方式為現金 , 勾選支票則文字也會跟著變化 , 而文字產生的內容以及規則我們是以 xml 來設定
+</code></pre>
+
+<p><img src="https://camo.githubusercontent.com/76fcbf7741f4670c36fb14984d3a77e1ad9c431b/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32333937313131322f6769746875622f323031342d31312d31385f3232343431322e6a7067" alt=""></p>
+
+<p><img src="https://camo.githubusercontent.com/76fcbf7741f4670c36fb14984d3a77e1ad9c431b/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32333937313131322f6769746875622f323031342d31312d31385f3232343431322e6a7067" alt=""></p>
+
+<pre><code>接下來我們來看看 xml 檔的設定 , 如下圖 : 
+TARGET : 套印的目標  , 再這裡的 chk_group 就是圖片上的 checkgroup
+CONTENT : 表示我們要產生的文字內容
+RULE : 當符合規則時則做套印的動作
+
+藉由這樣的設定使的動態套印更加靈活
+</code></pre>
+
+<p><img src="https://camo.githubusercontent.com/4305f1bf2944b6a424216c27eece40c93377cf35/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32333937313131322f6769746875622f323031342d31312d31385f3232353232362e6a7067" alt=""></p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/holmes2136">holmes2136</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
